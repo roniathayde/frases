@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import { DefaultLayout } from './pages/_layouts/default-layout.tsx'
 import { Biografia } from './pages/biografia.tsx'
-import { Frases } from './pages/frases.tsx'
+import { Frases } from './pages/frases'
 
 export const router = createBrowserRouter([
   {
@@ -11,11 +11,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Biografia />,
+        element: <Frases />,
       },
       {
         path: '/biografia',
-        element: <Frases />,
+        element: <Biografia />,
       },
     ],
   },
