@@ -27,12 +27,12 @@ const responsive = {
 
 export function Frases() {
   return (
-    <div className=" h-[600px]   w-full rounded bg-slate-950 p-6">
+    <div className=" min-h-[600px] w-full   rounded bg-slate-950 p-6">
       {/* remover className se os items bugarem */}
       <Carousel
         swipeable={true}
         draggable={true}
-        showDots={true}
+        showDots={false}
         infinite={true}
         autoPlay={true}
         autoPlaySpeed={4000}
@@ -40,14 +40,28 @@ export function Frases() {
         responsive={responsive}
         dotListClass="custom-dot-list-style"
         removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
-        className="h-[400px] max-w-[800px]"
+        className="min-h-[400px] max-w-[800px]"
       >
-        <CarouselItems text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex error illum sapiente odio aliquam totam distinctio aspernatur nulla! Similique natus nam officia deserunt, eligendi voluptatum veniam non architecto eum odio?" />
-        <CarouselItems text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex error illum sapiente odio aliquam totam distinctio aspernatur nulla! Similique natus nam officia deserunt, eligendi voluptatum veniam non architecto eum odio?" />
-        <CarouselItems text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex error illum sapiente odio aliquam totam distinctio aspernatur nulla! Similique natus nam officia deserunt, eligendi voluptatum veniam non architecto eum odio?" />
-        <CarouselItems text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex error illum sapiente odio aliquam totam distinctio aspernatur nulla! Similique natus nam officia deserunt, eligendi voluptatum veniam non architecto eum odio?" />
-        <CarouselItems text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex error illum sapiente odio aliquam totam distinctio aspernatur nulla! Similique natus nam officia deserunt, eligendi voluptatum veniam non architecto eum odio?" />
-        <CarouselItems text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex error illum sapiente odio aliquam totam distinctio aspernatur nulla! Similique natus nam officia deserunt, eligendi voluptatum veniam non architecto eum odio?" />
+        <CarouselItems text="deixa para trás tudo aquilo que não te deixa seguir em frente" />
+
+        <CarouselItems text="mas eu nunca entendi a importância do toque, do toque dela, até não ter mais" />
+        <CarouselItems
+          title="querer"
+          text="Eu queria você. <br>
+Mesmo com dúvidas. <br>
+Mesmo com medos. <br>
+Mesmo com surtos.<br>
+Mesmo com inseguranças.<br>
+Eu queria você.<br>
+O peso de querer me consumiu,<br>
+Porque eu não tive dúvida alguma do que queria.<br>
+Mas eu não poderia lutar por dois. eu não poderia lutar por nós, Quando o nós era apenas eu."
+        />
+        <CarouselItems text="nós precisamos do toque de quem amamos quase tanto quanto de ar pra respirar" />
+        <CarouselItems
+          title="confiança"
+          text="cansei de ter medo do que os outros pensam de mim. se quiser me julgar, vá em frente. vou continuar aqui, perfeita nas minhas imperfeições."
+        />
       </Carousel>
     </div>
   )

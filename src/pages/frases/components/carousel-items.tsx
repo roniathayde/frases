@@ -1,13 +1,18 @@
 export interface CarouselItemsProps {
+  title?: string
   text: string
 }
 
-export function CarouselItems({ text }: CarouselItemsProps) {
+export function CarouselItems({ title, text }: CarouselItemsProps) {
   return (
-    <div className="">
-      <h2 className="cursor-grab select-none font-serif text-xl font-light italic">
-        {text}
-      </h2>
+    <div className="min-h-96 cursor-grab overflow-hidden font-serif  font-light italic">
+      <h2 className=" mb-3 select-none text-2xl">{title}</h2>
+      <div
+        className="select-none text-xl"
+        dangerouslySetInnerHTML={{ __html: text }}
+      />
+
+      <div className="size-9 max-w-9"></div>
     </div>
   )
 }
